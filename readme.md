@@ -58,7 +58,7 @@ OPENAI_API_KEY=your_openai_api_key
 Start the FastAPI server
 
 ```bash
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 
 ### 5. Run the Frontend (Streamlit)
@@ -66,7 +66,7 @@ uvicorn app.main:app --reload
 In a new terminal, navigate to the project directory and run:
 
 ```bash
-streamlit run streamlit_app/app.py
+streamlit run frontend.py
 ```
 
 ## ⚙️ Tech Stack
