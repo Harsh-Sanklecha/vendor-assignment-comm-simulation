@@ -19,7 +19,7 @@ Customer tasks like hotel booking or urgent repairs are handled by backend agent
 - **FastAPI** – backend API for vendor selection and message generation
 - **Streamlit** – frontend interface to simulate task entry and vendor interaction
 - **Uvicorn** – ASGI server for FastAPI
-- **Google Generative LLM** – for task interpretation and message generation
+- **Google's Generative LLM (Gemini)** – for task interpretation and message generation
 
 ---
 
