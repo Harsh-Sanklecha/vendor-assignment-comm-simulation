@@ -19,6 +19,7 @@ Customer tasks like hotel booking or urgent repairs are handled by backend agent
 - **FastAPI** – backend API for vendor selection and message generation
 - **Streamlit** – frontend interface to simulate task entry and vendor interaction
 - **Uvicorn** – ASGI server for FastAPI
+- **Docker & Docker Compose** – for containerized deployment
 - **Google's Generative LLM (Gemini)** – for task interpretation and message generation
 
 ---
@@ -32,7 +33,35 @@ git clone https://github.com/your-username/vendor-ai-agent.git
 cd vendor-ai-agent
 ```
 
-### 2. Install dependencies
+### 2. Set Up Environment Variables
+
+Create a .env file in the root directory and add the following
+
+```sh
+OPENAI_API_KEY=your_openai_api_key
+```
+
+### 3. Docker Setup
+
+1. Build and Run the Containers
+
+```bash
+docker-compose up --build
+```
+
+This will:
+- Build the FastAPI backend container
+- Build the Streamlit frontend container
+- Load the environment variables from .env
+
+2. Access the Application
+
+FastAPI (API docs): http://localhost:8000/docs
+Streamlit (UI): http://localhost:8501
+
+## Manual (Non-Docker) Development Setup
+
+### 1. Install dependencies
 
 ```bash
 python -m venv venv
@@ -45,28 +74,20 @@ Install the required packages
 pip install -r requirements.txt
 ```
 
-### 3. Set Up Environment Variables
-
-Create a .env file in the root directory and add the following
-
-```sh
-OPENAI_API_KEY=your_openai_api_key
-```
-
-### 4. Run the Backend
+### 2. Run Backend Server (FastAPI)
 
 Start the FastAPI server
 
 ```bash
-uvicorn main:app --reload
+uvicorn backend.app.main:app --reload
 ```
 
-### 5. Run the Frontend (Streamlit)
+### 3. Run the Frontend (Streamlit)
 
 In a new terminal, navigate to the project directory and run:
 
 ```bash
-streamlit run frontend.py
+streamlit run frontend.app.frontend.py
 ```
 
 ## Mock Data Format

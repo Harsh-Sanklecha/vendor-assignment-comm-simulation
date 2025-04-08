@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-FASTAPI_URL = "http://localhost:8000/process-task"
+FASTAPI_URL = "http://backend:8000/process-task"
 
 # Sample categories and urgency levels
 categories = ["plumbing", "electrical", "cleaning", "other"]

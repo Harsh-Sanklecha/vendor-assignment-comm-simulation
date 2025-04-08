@@ -1,8 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 import uvicorn
-import json
-from typing import List, Dict, Any, Optional
 from vendor_agent import VendorAgent
 from pydantic import BaseModel
 
