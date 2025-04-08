@@ -69,6 +69,8 @@ In a new terminal, navigate to the project directory and run:
 streamlit run frontend.py
 ```
 
+## Mock Data Format
+
 ### Vendor Sample
 
 ```json
