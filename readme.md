@@ -75,12 +75,13 @@ streamlit run streamlit_app/app.py
 
 ```json
 {
-  "name": "QuickFix Plumbing",
-  "category": "repairs",
-  "response_time": "2h",
-  "preferred_tone": "formal",
-  "reliability_score": 4.8,
-  "constraints": ["lead_time >= 12h"]
+    "vendor_id": "V001",
+    "name": "Rapid Plumbers",
+    "category_expertise": ["repairs", "plumbing"],
+    "response_time_hours": 1,
+    "preferred_communication_style": "casual",
+    "past_reliability_score": 4.8,
+    "constraints": ["Only serves downtown area", "Requires 2hr lead time for non-urgent tasks"]
 }
 ```
 
@@ -88,9 +89,10 @@ streamlit run streamlit_app/app.py
 
 ```json
 {
-  "description": "Urgently need a plumber for a leaking pipe",
-  "category": "repairs",
-  "urgency": "high",
-  "special_requirements": ["bring spare parts"]
+    "task_id": "T101",
+    "task_description": "I need a plumber urgently for a leaking tap in the kitchen.",
+    "category": "plumbing",
+    "urgency": "high",
+    "special_requirements": "Need someone who can bring spare parts for standard faucet types."
 }
 ```
