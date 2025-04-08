@@ -56,8 +56,9 @@ This will:
 
 2. Access the Application
 
-FastAPI (API docs): http://localhost:8000/docs
-Streamlit (UI): http://localhost:8501
+FastAPI (API docs): http://0.0.0.0:8000
+
+Streamlit (UI): http://0.0.0.0:8501
 
 ## Manual (Non-Docker) Development Setup
 
